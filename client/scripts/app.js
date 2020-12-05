@@ -14,6 +14,7 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+    Friends.toggleStatus(App.username);
 
   },
 
@@ -23,6 +24,8 @@ var App = {
       console.log(data);
       // MessagesView's render here
       callback();
+      RoomsView.render(data);
+      MessagesView.render(data);
     });
   },
 

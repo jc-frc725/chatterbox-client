@@ -94,7 +94,6 @@ describe('chatterbox', function() {
       });
       $('#chats').find('.username').trigger('click');
       expect(Friends.toggleStatus.called).to.be.true;
-
       Friends.toggleStatus.restore();
     });
 
