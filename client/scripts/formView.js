@@ -17,6 +17,11 @@ var FormView = {
     // that will be sent to server
 
     // server will take in message (Model), then Viewers must update?
+    var message = {
+      username: App.username,
+      text: FormView.$form.find('#message').val(),
+      roomname: 'lobby'
+    };
 
     // sending to server => Need Parse.create()?
     // need message object in given format {username, text, room}

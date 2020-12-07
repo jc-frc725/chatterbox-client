@@ -23,24 +23,20 @@ var MessagesView = {
       if (message.username) {
         MessagesView.renderMessage(message);
       }
-      if (!message.username) {
-        delete message;
-      }
       // dont render it
       // access 'message' properties
-
     }
     // on each object at i, invoke renderMessage
   },
 
   renderMessage: function(message) {
 
-    var html = MessageView.render(message);
+    var $message = MessageView.render(message);
     //console.log(html);
     //console.log(MessagesView.$chats);
 
     // adds message to $chats.children()
-    MessagesView.$chats.append(html);
+    MessagesView.$chats.append($message);
   }
 
 };
